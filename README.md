@@ -1,3 +1,18 @@
-# IDS-Repository
+> [!NOTE]  
+> english see below
 
-This repository contains example rules according to the Information Delivery Standard (IDS) by buildingSMART International. IDS rules allow to define information requirements to Building Information Models.
+# OpenBIMRL Prüfregeln (DE)
+
+In dem Repository finden die Beispielregeln zur fachlichen Prüfung von BIM-Modellen auf Basis der OpenBIM Rule Language (OpenBIMRL).
+
+**Übersicht**
+
+
+
+
+
+
+# OpenBIMRL Rule Sets (EN)
+This repository contains example rules according to the OpenBIM Rule Language (OpenBIMRL)
+
+**Table of Contents**
