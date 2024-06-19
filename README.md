@@ -6,7 +6,7 @@
 In dem Repository finden die Beispielregeln zur fachlichen Prüfung von BIM-Modellen auf Basis der OpenBIM Rule Language (OpenBIMRL).
 
 **Übersicht**
-* [Prüfregeln Webinare](https://github.com/VSK-Software-GmbH/BIM.permit-IDS-repository/tree/main/de/Webinare)
+* [Prüfregeln Webinare](https://github.com/VSK-Software-GmbH/BIM.permit-OpenBIMRL-repository/tree/main/de/Webinare)
 
 
 
