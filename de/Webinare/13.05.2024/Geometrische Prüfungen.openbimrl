@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<openBIMRLType version="2024.3.1" xmlns="http://inf.bi.rub.de/OpenBimRL">
+    <BIMRule name="Kollisionsprüfung">
+        <Precalculations>
+            <Node id="979036a1-c2a9-4ba3-ab8e-9124b3570de7" function="input.textInput" alias="IfcWall" xPos="1247" yPos="-465">
+                <Outputs>
+                    <Output name="text" value="IfcWall"/>
+                </Outputs>
+            </Node>
+            <Node id="d109b289-f5c5-4a8d-a683-2cf6a2009692" function="input.textInput" alias="IfcWall" xPos="1246" yPos="-260">
+                <Outputs>
+                    <Output name="text" value="IfcWall"/>
+                </Outputs>
+            </Node>
+            <Node id="03aaff65-769e-4d2b-b51c-7fa773ff1b86" function="models.ifc.getElementByType" alias="Example Text Here" xPos="1862" yPos="-519">
+                <Inputs>
+                    <Input name="IfcType"/>
+                </Inputs>
+                <Outputs>
+                    <Output name="IfcElement List"/>
+                </Outputs>
+            </Node>
+            <Node id="a243d865-38e4-4fc5-9bff-f67a4e673de5" function="models.ifc.getElementByType" alias="Example Text Here" xPos="1860" yPos="-319">
+                <Inputs>
+                    <Input name="IfcType"/>
+                </Inputs>
+                <Outputs>
+                    <Output name="IfcElement List"/>
+                </Outputs>
+            </Node>
+            <Node id="e055c954-d2d6-4170-8064-fa901f30a5cb" function="geometry.collision" alias="Collosion" xPos="2928" yPos="-320">
+                <Inputs>
+                    <Input name="first mesh"/>
+                    <Input name="second mesh"/>
+                    <Input name="tolerance in m^3"/>
+                </Inputs>
+                <Outputs>
+                    <Output name="mesh"/>
+                    <Output name="elementIds"/>
+                </Outputs>
+            </Node>
+            <Node id="86ad7439-6666-4204-a596-7bc53236d305" function="models.ifc.getGeometry" alias="Example Text Here" xPos="2354" yPos="-306">
+                <Inputs>
+                    <Input name="IfcElement"/>
+                    <Input name="include parts"/>
+                </Inputs>
+                <Outputs>
+                    <Output name="Mesh"/>
+                </Outputs>
+            </Node>
+            <Node id="84b0d3b4-b197-4f15-b0dd-5894cf8efa0e" function="models.ifc.getGeometry" alias="Example Text Here" xPos="2348" yPos="-507">
+                <Inputs>
+                    <Input name="IfcElement"/>
+                    <Input name="include parts"/>
+                </Inputs>
+                <Outputs>
+                    <Output name="Mesh"/>
+                </Outputs>
+            </Node>
+            <Node id="b4cd12f4-a10a-4a06-9cbb-6678f82117aa" function="input.textInput" alias="0.0" xPos="2351" yPos="-81">
+                <Outputs>
+                    <Output name="text" value="0.0"/>
+                </Outputs>
+            </Node>
+            <Node id="2d2c6296-7daa-473c-b844-d0771c33de19" function="collection.list.count" alias="Example Text Here" xPos="3436" yPos="-324">
+                <Inputs>
+                    <Input name="List"/>
+                </Inputs>
+                <Outputs>
+                    <Output name="Result"/>
+                </Outputs>
+            </Node>
+            <Node id="86030b56-5a9c-4cba-97a8-a0497547320e" function="models.ifc.getElementById" alias="Example Text Here" xPos="3481" yPos="-1210">
+                <Inputs>
+                    <Input name="GUID"/>
+                </Inputs>
+                <Outputs>
+                    <Output name="IfcElement"/>
+                </Outputs>
+            </Node>
+            <Node id="534dc88f-ae89-4438-9325-2ab480831a99" function="input.textInput" alias="IfcProduct" xPos="2932" yPos="-860">
+                <Outputs>
+                    <Output name="text" value="IfcProduct"/>
+                </Outputs>
+            </Node>
+            <Node id="96dfce66-f1c8-4ef4-9d99-0365c27efb79" function="models.ifc.getElementByType" alias="Example Text Here" xPos="3475" yPos="-913">
+                <Inputs>
+                    <Input name="IfcType"/>
+                </Inputs>
+                <Outputs>
+                    <Output name="IfcElement List"/>
+                </Outputs>
+            </Node>
+            <Node id="cbcfa187-91b2-4c02-b528-88fee922af24" function="collection.list.removeFromList" alias="Example Text Here" xPos="3992" yPos="-1072">
+                <Inputs>
+                    <Input name="List A"/>
+                    <Input name="List B"/>
+                </Inputs>
+                <Outputs>
+                    <Output name="Altered_List_A"/>
+                </Outputs>
+            </Node>
+            <Node id="2cb5039f-e857-4b77-898d-2d89b59c0e8f" function="models.ifc.colorize" alias="Colorize" xPos="4412" yPos="-1353">
+                <Inputs>
+                    <Input name="IFC objects"/>
+                    <Input name="color"/>
+                </Inputs>
+                <Outputs>
+                    <Output name="IFC objects"/>
+                </Outputs>
+            </Node>
+            <Node id="84b70a5a-9f05-4dd5-8ae4-45524149e8db" function="input.colorInput" alias="#F5A62380" xPos="3947" yPos="-1358">
+                <Outputs>
+                    <Output name="HEX" value="#F5A623"/>
+                    <Output name="HEX8" value="#F5A62380"/>
+                    <Output name="RGBA" value="{&quot;r&quot;:245,&quot;g&quot;:166,&quot;b&quot;:35,&quot;a&quot;:0.5}"/>
+                </Outputs>
+            </Node>
+            <Node id="24f7ef9f-8000-4c50-955d-8a68289a67cf" function="models.ifc.hide" alias="Hide" xPos="4519" yPos="-1055">
+                <Inputs>
+                    <Input name="IFC objects"/>
+                </Inputs>
+                <Outputs>
+                    <Output name="IFC objects"/>
+                </Outputs>
+            </Node>
+            <Node id="fd99f520-7d8d-4b77-9c5c-e88fb4374b77" function="geometry.show" alias="Show" xPos="4281" yPos="-757">
+                <Inputs>
+                    <Input name="mesh"/>
+                    <Input name="color"/>
+                </Inputs>
+                <Outputs>
+                    <Output name="mesh"/>
+                </Outputs>
+            </Node>
+            <Node id="bf6f2186-9433-4f5a-b638-9bcb215977c1" function="input.colorInput" alias="#D0021BFF" xPos="3956" yPos="-787">
+                <Outputs>
+                    <Output name="HEX" value="#D0021B"/>
+                    <Output name="HEX8" value="#D0021BFF"/>
+                    <Output name="RGBA" value="{&quot;r&quot;:208,&quot;g&quot;:2,&quot;b&quot;:27,&quot;a&quot;:1}"/>
+                </Outputs>
+            </Node>
+            <Node id="4f61b177-9967-4ab8-931a-623195b3320f" function="geometry.volume" alias="Volume" xPos="3437" yPos="-96">
+                <Inputs>
+                    <Input name="mesh"/>
+                </Inputs>
+                <Outputs>
+                    <Output name="volume"/>
+                </Outputs>
+            </Node>
+            <Node id="e362af0e-e5bc-4add-af2a-04ba910a2405" function="math.operators.sum" alias="Example Text Here" xPos="3916" yPos="-109">
+                <Inputs>
+                    <Input name="List"/>
+                </Inputs>
+                <Outputs>
+                    <Output name="Sum"/>
+                    <Output name="Partials"/>
+                </Outputs>
+            </Node>
+            <Edge id="22bfbbb2-b595-4e89-870d-3abca5ac9dad" source="979036a1-c2a9-4ba3-ab8e-9124b3570de7" sourceHandle="0" target="03aaff65-769e-4d2b-b51c-7fa773ff1b86" targetHandle="0"/>
+            <Edge id="705ee1e5-9095-4fc5-9243-755eaa1e48f6" source="d109b289-f5c5-4a8d-a683-2cf6a2009692" sourceHandle="0" target="a243d865-38e4-4fc5-9bff-f67a4e673de5" targetHandle="0"/>
+            <Edge id="5400a362-0061-48ae-bdb9-21c2c0829973" source="a243d865-38e4-4fc5-9bff-f67a4e673de5" sourceHandle="0" target="86ad7439-6666-4204-a596-7bc53236d305" targetHandle="0"/>
+            <Edge id="aa3d8997-ac47-47f0-90b9-b03a589f866a" source="03aaff65-769e-4d2b-b51c-7fa773ff1b86" sourceHandle="0" target="84b0d3b4-b197-4f15-b0dd-5894cf8efa0e" targetHandle="0"/>
+            <Edge id="ca2346a7-401d-45b7-8b84-3574d47023d3" source="84b0d3b4-b197-4f15-b0dd-5894cf8efa0e" sourceHandle="0" target="e055c954-d2d6-4170-8064-fa901f30a5cb" targetHandle="0"/>
+            <Edge id="3b527e5f-918b-4323-9264-72add72f6f45" source="86ad7439-6666-4204-a596-7bc53236d305" sourceHandle="0" target="e055c954-d2d6-4170-8064-fa901f30a5cb" targetHandle="1"/>
+            <Edge id="c2441a27-f417-4b89-ac18-c5b2992c11dd" source="b4cd12f4-a10a-4a06-9cbb-6678f82117aa" sourceHandle="0" target="e055c954-d2d6-4170-8064-fa901f30a5cb" targetHandle="2"/>
+            <Edge id="7a71998c-f010-47df-ad8c-50106eca7f90" source="e055c954-d2d6-4170-8064-fa901f30a5cb" sourceHandle="0" target="2d2c6296-7daa-473c-b844-d0771c33de19" targetHandle="0"/>
+            <Edge id="128d7fa1-7da2-482d-9d27-1972dc211930" source="e055c954-d2d6-4170-8064-fa901f30a5cb" sourceHandle="1" target="86030b56-5a9c-4cba-97a8-a0497547320e" targetHandle="0"/>
+            <Edge id="f0debbbc-fa0c-49d5-8a46-1abf4b97a662" source="534dc88f-ae89-4438-9325-2ab480831a99" sourceHandle="0" target="96dfce66-f1c8-4ef4-9d99-0365c27efb79" targetHandle="0"/>
+            <Edge id="c37c4f96-a7b8-4c15-ab97-407d9993f76b" source="96dfce66-f1c8-4ef4-9d99-0365c27efb79" sourceHandle="0" target="cbcfa187-91b2-4c02-b528-88fee922af24" targetHandle="0"/>
+            <Edge id="6ffe9e4f-5601-4f51-9ad4-d056aa54ec94" source="86030b56-5a9c-4cba-97a8-a0497547320e" sourceHandle="0" target="cbcfa187-91b2-4c02-b528-88fee922af24" targetHandle="1"/>
+            <Edge id="ae8b83b7-e68e-4fcc-b950-0311ecb738fa" source="84b70a5a-9f05-4dd5-8ae4-45524149e8db" sourceHandle="2" target="2cb5039f-e857-4b77-898d-2d89b59c0e8f" targetHandle="1"/>
+            <Edge id="f33106ee-b79e-4c6b-b0de-014e1133b963" source="86030b56-5a9c-4cba-97a8-a0497547320e" sourceHandle="0" target="2cb5039f-e857-4b77-898d-2d89b59c0e8f" targetHandle="0"/>
+            <Edge id="07e07e4c-5cce-4599-9dcb-c7b7dd0a321a" source="cbcfa187-91b2-4c02-b528-88fee922af24" sourceHandle="0" target="24f7ef9f-8000-4c50-955d-8a68289a67cf" targetHandle="0"/>
+            <Edge id="0eece328-1161-4908-9023-cfba6f387484" source="e055c954-d2d6-4170-8064-fa901f30a5cb" sourceHandle="0" target="fd99f520-7d8d-4b77-9c5c-e88fb4374b77" targetHandle="0"/>
+            <Edge id="b5743824-ad4d-4fb8-ba05-7b3cdb659e55" source="bf6f2186-9433-4f5a-b638-9bcb215977c1" sourceHandle="2" target="fd99f520-7d8d-4b77-9c5c-e88fb4374b77" targetHandle="1"/>
+            <Edge id="705eb68c-2592-412e-8985-7c1af31ec8d2" source="e055c954-d2d6-4170-8064-fa901f30a5cb" sourceHandle="0" target="4f61b177-9967-4ab8-931a-623195b3320f" targetHandle="0"/>
+            <Edge id="40383017-b046-4ba9-b80e-ed56af16e1e3" source="4f61b177-9967-4ab8-931a-623195b3320f" sourceHandle="0" target="e362af0e-e5bc-4add-af2a-04ba910a2405" targetHandle="0"/>
+        </Precalculations>
+        <ModelCheck name="Geometrische Prüfungen">
+            <RuleIdentifiers>
+                <RuleIdentifier source="2d2c6296-7daa-473c-b844-d0771c33de19" sourceHandle="0" label="Anzahl der Kollisionen" xPos="3900" yPos="-315"/>
+                <RuleIdentifier source="e362af0e-e5bc-4add-af2a-04ba910a2405" sourceHandle="0" label="Gesamtvolumen der Kollision" xPos="4438" yPos="-110"/>
+            </RuleIdentifiers>
+            <ModelSubChecks>
+                <ModelSubCheck name="Darf keine Kollision besitzen" description="Prüft ob die Anzahl der Kollisionen genau 0 ist.">
+                    <Rules operator="or">
+                        <Rule label="14d01fbc-7f82-4a49-b4d4-33fdbaa4b39d" operator="equals" operand1="Anzahl der Kollisionen" operand2="0"/>
+                        <Rule operator="lessThan" operand1="Gesamtvolumen der Kollision" operand2="1"/>
+                    </Rules>
+                </ModelSubCheck>
+            </ModelSubChecks>
+            <ResultSets/>
+        </ModelCheck>
+    </BIMRule>
+</openBIMRLType>

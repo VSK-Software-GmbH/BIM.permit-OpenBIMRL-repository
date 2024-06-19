@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<openBIMRLType version="2024.3.1" xmlns="http://inf.bi.rub.de/OpenBimRL">
+    <BIMRule name="Fensterprüfung">
+        <Precalculations>
+            <Node id="fa906260-32cd-4bce-9dd2-8ef926f4c106" function="input.textInput" alias="IfcWindow" xPos="491" yPos="172">
+                <Outputs>
+                    <Output name="text" value="IfcWindow"/>
+                </Outputs>
+            </Node>
+            <Node id="a6a27731-87e8-41c7-b2c6-d6cf21c6ee87" function="input.textInput" alias="Qto_WindowBaseQuantities" xPos="995" yPos="304">
+                <Outputs>
+                    <Output name="text" value="Qto_WindowBaseQuantities"/>
+                </Outputs>
+            </Node>
+            <Node id="72c771ca-d49e-4409-b1b8-d54949de5798" function="input.textInput" alias="Area" xPos="1005" yPos="422">
+                <Outputs>
+                    <Output name="text" value="Area"/>
+                </Outputs>
+            </Node>
+            <Node id="05bf7963-7647-4e6a-8bc9-f22d74979264" function="models.ifc.getElementByType" alias="Example Text Here" xPos="1001" yPos="-46">
+                <Inputs>
+                    <Input name="IfcType"/>
+                </Inputs>
+                <Outputs>
+                    <Output name="IfcElement List"/>
+                </Outputs>
+            </Node>
+            <Node id="d9a6dc61-a090-4d32-aca9-e607699b6f38" function="models.ifc.getQuantityAsString" alias="Example Text Here" xPos="1503" yPos="224">
+                <Inputs>
+                    <Input name="IfcElement"/>
+                    <Input name="QuantitySetName"/>
+                    <Input name="QuantityName"/>
+                </Inputs>
+                <Outputs>
+                    <Output name="stringValues"/>
+                </Outputs>
+            </Node>
+            <Node id="b85bf6eb-0ac6-4b72-be12-ab69d24b4ef4" function="math.utilities.roundNumber" alias="Round" xPos="2014" yPos="260">
+                <Inputs>
+                    <Input name="Value"/>
+                    <Input name="Precision"/>
+                </Inputs>
+                <Outputs>
+                    <Output name="Rounded Value"/>
+                </Outputs>
+            </Node>
+            <Node id="3f0d6a29-7085-487f-8ecd-50fb445e591b" function="input.textInput" alias="3" xPos="1501" yPos="483">
+                <Outputs>
+                    <Output name="text" value="3"/>
+                </Outputs>
+            </Node>
+            <Node id="50b59ab6-3ca4-4ddc-8db6-d48e454ee859" function="math.operators.largerThan" alias="Example Text Here" xPos="3403" yPos="277">
+                <Inputs>
+                    <Input name="A"/>
+                    <Input name="B"/>
+                </Inputs>
+                <Outputs>
+                    <Output name="A&gt;=B?"/>
+                </Outputs>
+            </Node>
+            <Node id="1b47f545-ff64-42b7-a6da-2fff577bde69" function="input.textInput" alias="3" xPos="2958" yPos="370">
+                <Outputs>
+                    <Output name="text" value="3"/>
+                </Outputs>
+            </Node>
+            <Node id="f7d0af97-9148-44d2-aaff-56d81ff3c3c6" function="collection.list.dispatchElements" alias="Example Text Here" xPos="3942" yPos="-34">
+                <Inputs>
+                    <Input name="List"/>
+                    <Input name="Filter"/>
+                </Inputs>
+                <Outputs>
+                    <Output name="List_A"/>
+                    <Output name="List_B"/>
+                </Outputs>
+            </Node>
+            <Node id="96365088-cf41-4273-819b-fd91f896d781" function="models.ifc.colorize" alias="Colorize" xPos="4565" yPos="-177">
+                <Inputs>
+                    <Input name="IFC objects"/>
+                    <Input name="color"/>
+                </Inputs>
+                <Outputs>
+                    <Output name="IFC objects"/>
+                </Outputs>
+            </Node>
+            <Node id="6ebf32b1-46e1-40e0-8379-dbeb6481a46d" function="models.ifc.colorize" alias="Colorize" xPos="4565" yPos="99">
+                <Inputs>
+                    <Input name="IFC objects"/>
+                    <Input name="color"/>
+                </Inputs>
+                <Outputs>
+                    <Output name="IFC objects"/>
+                </Outputs>
+            </Node>
+            <Node id="d323206e-a496-4daa-a4d8-51441f9492c8" function="input.colorInput" alias="#7ED321FF" xPos="4018" yPos="-292">
+                <Outputs>
+                    <Output name="HEX" value="#7ED321"/>
+                    <Output name="HEX8" value="#7ED321FF"/>
+                    <Output name="RGBA" value="{&quot;r&quot;:126,&quot;g&quot;:211,&quot;b&quot;:33,&quot;a&quot;:1}"/>
+                </Outputs>
+            </Node>
+            <Node id="5d6d71b7-dcaf-4da9-bf99-59e5305176b7" function="input.colorInput" alias="#D0021BFF" xPos="4018" yPos="198">
+                <Outputs>
+                    <Output name="HEX" value="#D0021B"/>
+                    <Output name="HEX8" value="#D0021BFF"/>
+                    <Output name="RGBA" value="{&quot;r&quot;:208,&quot;g&quot;:2,&quot;b&quot;:27,&quot;a&quot;:1}"/>
+                </Outputs>
+            </Node>
+            <Node id="9b39f259-1ca5-4304-a478-4a24b178847c" function="models.ifc.isolate" alias="Isolate" xPos="1505" yPos="-235">
+                <Inputs>
+                    <Input name="IFC objects"/>
+                </Inputs>
+                <Outputs>
+                    <Output name="IFC objects"/>
+                </Outputs>
+            </Node>
+            <Edge id="2a1f7e10-d7a2-4250-b000-67c7b720c643" source="fa906260-32cd-4bce-9dd2-8ef926f4c106" sourceHandle="0" target="05bf7963-7647-4e6a-8bc9-f22d74979264" targetHandle="0"/>
+            <Edge id="4bf9affe-ce16-4c79-920a-68e0e9d3e4fb" source="05bf7963-7647-4e6a-8bc9-f22d74979264" sourceHandle="0" target="d9a6dc61-a090-4d32-aca9-e607699b6f38" targetHandle="0"/>
+            <Edge id="6be973cc-8958-4757-847d-e1e026b104ef" source="72c771ca-d49e-4409-b1b8-d54949de5798" sourceHandle="0" target="d9a6dc61-a090-4d32-aca9-e607699b6f38" targetHandle="2"/>
+            <Edge id="ee71cab7-8125-4aed-b3d9-ec41a4327773" source="a6a27731-87e8-41c7-b2c6-d6cf21c6ee87" sourceHandle="0" target="d9a6dc61-a090-4d32-aca9-e607699b6f38" targetHandle="1"/>
+            <Edge id="d5f8c526-cb00-42b7-94f7-c7601b1b55c6" source="3f0d6a29-7085-487f-8ecd-50fb445e591b" sourceHandle="0" target="b85bf6eb-0ac6-4b72-be12-ab69d24b4ef4" targetHandle="1"/>
+            <Edge id="511b657a-8df1-43d0-a2ee-3a467ba4a3db" source="d9a6dc61-a090-4d32-aca9-e607699b6f38" sourceHandle="0" target="b85bf6eb-0ac6-4b72-be12-ab69d24b4ef4" targetHandle="0"/>
+            <Edge id="0764ac33-9022-4ce4-af1f-871d5f098a61" source="b85bf6eb-0ac6-4b72-be12-ab69d24b4ef4" sourceHandle="0" target="50b59ab6-3ca4-4ddc-8db6-d48e454ee859" targetHandle="0"/>
+            <Edge id="fedc3ac1-5508-4d41-8ce3-cd3db7203c9b" source="1b47f545-ff64-42b7-a6da-2fff577bde69" sourceHandle="0" target="50b59ab6-3ca4-4ddc-8db6-d48e454ee859" targetHandle="1"/>
+            <Edge id="720f4e7a-fed6-4f13-aa1d-e0697d2bd886" source="50b59ab6-3ca4-4ddc-8db6-d48e454ee859" sourceHandle="0" target="f7d0af97-9148-44d2-aaff-56d81ff3c3c6" targetHandle="1"/>
+            <Edge id="4dad77e3-9582-45e0-844f-f0485da16a87" source="05bf7963-7647-4e6a-8bc9-f22d74979264" sourceHandle="0" target="f7d0af97-9148-44d2-aaff-56d81ff3c3c6" targetHandle="0"/>
+            <Edge id="87f3de6d-e51d-4106-b24b-c20d937148df" source="f7d0af97-9148-44d2-aaff-56d81ff3c3c6" sourceHandle="0" target="96365088-cf41-4273-819b-fd91f896d781" targetHandle="0"/>
+            <Edge id="ef311001-f215-433c-85bd-e77dd8047ea0" source="f7d0af97-9148-44d2-aaff-56d81ff3c3c6" sourceHandle="1" target="6ebf32b1-46e1-40e0-8379-dbeb6481a46d" targetHandle="0"/>
+            <Edge id="8f59bb73-2822-42a5-a755-3dc16ad74799" source="d323206e-a496-4daa-a4d8-51441f9492c8" sourceHandle="2" target="96365088-cf41-4273-819b-fd91f896d781" targetHandle="1"/>
+            <Edge id="88448b57-ed33-42b0-b128-c1558de16c6a" source="5d6d71b7-dcaf-4da9-bf99-59e5305176b7" sourceHandle="2" target="6ebf32b1-46e1-40e0-8379-dbeb6481a46d" targetHandle="1"/>
+            <Edge id="0ae084ab-e26d-424e-b7eb-a6379ab793f8" source="05bf7963-7647-4e6a-8bc9-f22d74979264" sourceHandle="0" target="9b39f259-1ca5-4304-a478-4a24b178847c" targetHandle="0"/>
+        </Precalculations>
+        <ModelCheck name="Bauteilprüfung Fenster">
+            <RuleIdentifiers>
+                <RuleIdentifier source="b85bf6eb-0ac6-4b72-be12-ab69d24b4ef4" sourceHandle="0" label="Fensterfläche" xPos="2518" yPos="545"/>
+                <RuleIdentifier source="96365088-cf41-4273-819b-fd91f896d781" sourceHandle="0" label="Erfolgreich geprüfte Fenster" xPos="5108" yPos="-151"/>
+                <RuleIdentifier source="6ebf32b1-46e1-40e0-8379-dbeb6481a46d" sourceHandle="0" label="Fehlgeschlagene Fenster" xPos="5113" yPos="119"/>
+            </RuleIdentifiers>
+            <ModelSubChecks>
+                <ModelSubCheck name="Prüfe Fläche größer 3" description="...">
+                    <Rule quantifier="all" operator="greaterThanOrEquals" operand1="Fensterfläche" operand2="3"/>
+                </ModelSubCheck>
+            </ModelSubChecks>
+            <ResultSets/>
+        </ModelCheck>
+    </BIMRule>
+</openBIMRLType>
